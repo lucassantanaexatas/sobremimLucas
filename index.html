@@ -563,8 +563,8 @@
         }
         .escolas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
         }
         .escola-card {
             background: var(--surface);
@@ -589,10 +589,43 @@
             font-size: 1.6rem;
             color: rgba(255,255,255,0.15);
         }
+        .escola-logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin: 0 auto 16px;
+            display: block;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+            transition: transform 0.3s;
+        }
+        .escola-card:hover .escola-logo {
+            transform: scale(1.06);
+        }
         .escola-nome {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.2);
-            font-style: italic;
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .escola-desc {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        .escola-tag {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: rgba(0,229,255,0.08);
+            border: 1px solid rgba(0,229,255,0.2);
+            color: var(--neon);
         }
 
         /* ── FOOTER ─────────────────────────────── */
@@ -671,7 +704,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://t.me/SEU_USUARIO" target="_blank">
+                    <a href="https://t.me/lucassantanaexatas" target="_blank">
                         <i class="fab fa-telegram"></i> Telegram
                     </a>
                 </li>
@@ -840,7 +873,7 @@
                         com resoluções detalhadas passo a passo. Material ideal para
                         quem quer aprender de verdade com os próprios erros.
                     </p>
-                    <a href="index.html" class="projeto-link" target="_blank">
+                    <a href="https://lucassantanaexatas.github.io/LucasSanatanaExatas/" class="projeto-link" target="_blank">
                         Acessar e-book <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -906,21 +939,40 @@
             </div>
 
             <div class="escolas-grid">
+                <!-- Colégio Santa Afra -->
                 <div class="escola-card reveal reveal-delay-1">
-                    <div class="escola-placeholder"><i class="fas fa-school"></i></div>
-                    <div class="escola-nome">Em breve</div>
+                    <img src="Logo-Santa-Afra.webp" alt="Colégio Santa Afra" class="escola-logo">
+                    <div class="escola-nome">Colégio Santa Afra</div>
+                    <div class="escola-desc">
+                        Referência de ensino em Arapiraca, do Ensino Infantil ao Médio.
+                        1º lugar no ENEM em Arapiraca, com infraestrutura completa e
+                        metodologia inovadora voltada ao desenvolvimento integral do aluno.
+                    </div>
+                    <span class="escola-tag">Ed. Básica · Arapiraca</span>
                 </div>
+
+                <!-- Super Cursos -->
                 <div class="escola-card reveal reveal-delay-2">
-                    <div class="escola-placeholder"><i class="fas fa-school"></i></div>
-                    <div class="escola-nome">Em breve</div>
+                    <img src="supercursos-logo.jpg" alt="Super Cursos Arapiraca" class="escola-logo">
+                    <div class="escola-nome">Super Cursos</div>
+                    <div class="escola-desc">
+                        Cursinho pré-vestibular de referência em Arapiraca, com foco no
+                        Extensivo ENEM. Equipe de professores especialistas preparando
+                        alunos para conquistar as melhores universidades do país.
+                    </div>
+                    <span class="escola-tag">Cursinho · ENEM 2026</span>
                 </div>
+
+                <!-- Slot vazio 1 -->
                 <div class="escola-card reveal reveal-delay-3">
                     <div class="escola-placeholder"><i class="fas fa-school"></i></div>
-                    <div class="escola-nome">Em breve</div>
+                    <div class="escola-nome" style="color:rgba(255,255,255,0.2);font-style:italic;font-family:var(--font-body);font-weight:400;">Em breve</div>
                 </div>
+
+                <!-- Slot vazio 2 -->
                 <div class="escola-card reveal reveal-delay-4">
                     <div class="escola-placeholder"><i class="fas fa-school"></i></div>
-                    <div class="escola-nome">Em breve</div>
+                    <div class="escola-nome" style="color:rgba(255,255,255,0.2);font-style:italic;font-family:var(--font-body);font-weight:400;">Em breve</div>
                 </div>
             </div>
         </div>
